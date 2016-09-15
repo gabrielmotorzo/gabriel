@@ -1,0 +1,31 @@
+{
+  "name": "motorzo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmotorzo/zomotor.git"
+  },
+  "author": "Gabriel Amaizu <gabriel@motorzo.in>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielmotorzo/zomotor/issues"
+  },
+  "homepage": "https://github.com/gabrielmotorzo/zomotor#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-inline": "^0.2.1",
+    "gulp-uglify": "^2.0.0",
+    "yargs": "^5.0.0"
+  }
+}

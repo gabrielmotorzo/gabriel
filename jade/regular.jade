@@ -1,0 +1,27 @@
+extends _layouts/master
+
+block content
+  .container-fluid
+    .row
+      .col-md-3
+        aside#sidebar.sidebar(data-plugin-sticky='', data-plugin-options='{"minWidth": 991, "containerSelector": ".container", "padding": {"top": 110}}')
+          h4.heading-primary Services
+          ul.nav.nav-list.mb-xl.show-bg-active
+            li
+              a(href='regular.html') Regular Service
+            li
+              a(href='repairs.html') Repairs &Fixes
+            li
+              a(href='body.html') Bodyworks
+            li.active
+              a(href='clean.html') Cleaning & Care
+            li
+              a(href='tyres.html') Tyres & Batteries
+            li
+              a(href='break.html') Breakdown
+      .col-md-9
+        h2 Regular Services
+        p.first
+          | Regular Vehicle Maintenance every year (or based on your vehicle and running) will help it keep running longer, better, smoother and more efficiently. It is important even if you don’t cover many kilometres as many components like the additives in engine oil have an expiry date. That’s why most manufacturers recommend changes at every 10,000 kilometres run or a period of 1 year.
+        p
+          | Lubrication of Periodic Maintenance will also help diagnose any impending problems that will manifest into major issues with time. MotorZo will provide you with a clear list of all the parts to be changed and service to be done as recommended by the manufacturer. In case of any additional repairs, our technical team will verify and take your approval post a detailed explanation, before proceeding with the service. Now, that’s a smart service!

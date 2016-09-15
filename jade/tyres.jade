@@ -1,0 +1,25 @@
+extends _layouts/master
+
+block content
+  .container-fluid
+    .row
+      .col-md-3
+        aside#sidebar.sidebar(data-plugin-sticky='', data-plugin-options='{"minWidth": 991, "containerSelector": ".container", "padding": {"top": 110}}')
+          h4.heading-primary Services
+          ul.nav.nav-list.mb-xl.show-bg-active
+            li
+              a(href='regular.html') Regular Service
+            li
+              a(href='repairs.html') Repairs &Fixes
+            li
+              a(href='body.html') Bodyworks
+            li.active
+              a(href='clean.html') Cleaning & Care
+            li
+              a(href='tyres.html') Tyres & Batteries
+            li
+              a(href='break.html') Breakdown
+      .col-md-9
+        h2 Tyres and Batteries
+        p.first
+          | Tyres and Batteries are two critical components that are required to be changed periodically according to the use and age of your car. Ignoring this can leave you stranded in the middle of nowhere or even lead to serious accidents! MotorZo provides you the best options to get them checked, repaired or replaced at any of our certified Tyre and Battery shops near you. We have a spread across the entire Bangalore City in case you get caught unawares. Now, that’s a smart service!

@@ -1,0 +1,25 @@
+extends _layouts/master
+
+block content
+  .container-fluid
+    .row
+      .col-md-3
+        aside#sidebar.sidebar(data-plugin-sticky='', data-plugin-options='{"minWidth": 991, "containerSelector": ".container", "padding": {"top": 110}}')
+          h4.heading-primary Services
+          ul.nav.nav-list.mb-xl.show-bg-active
+            li
+              a(href='regular.html') Regular Service
+            li
+              a(href='repairs.html') Repairs &Fixes
+            li
+              a(href='body.html') Bodyworks
+            li
+              a(href='clean.html') Cleaning & Care
+            li
+              a(href='tyres.html') Tyres & Batteries
+            li.active
+              a(href='break.html') Breakdown
+      .col-md-9
+        h2 Breakdown Services
+        p.first
+          | Caught in an emergency situation or car not starting? Don’t know who to call or don’t see any service stations nearby? We know how it feels. That’s why MotorZo is always there to help you. Dial up our emergency helpline number and we will be there to save your day. Remember the number; +91 7848 060606. Now, that’s a smart service!

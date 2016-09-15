@@ -1,0 +1,84 @@
+extends _layouts/master
+
+block vars
+  - var currentNav = 'faq';
+
+block content
+  section.page-header
+    .container
+      .row
+        .col-md-12
+          ul.breadcrumb
+            li
+              a(href='index.html') Home
+            li.active Faq
+      .row
+        .col-md-12
+          h1 FAQ
+  .container
+    .row
+      .col-md-12
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', href='#collapse1One', aria-expanded='false')
+                  | What is MotorZo?
+            #collapse1One.accordion-body(aria-expanded='false')
+              .panel-body
+                p
+                  | MotorZo is a one stop technology solution to all car related needs. It takes care of end to end car solutions in Bangalore. Whether you are looking to renew your insurance or wash your car, get a periodic service or upgrade your tyres, do an emission check or an accessory fitment, we have you covered!
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse1Two', aria-expanded='false')
+                  | Where does my car get serviced?
+            #collapse1Two.accordion-body.collapse(aria-expanded='false')
+              .panel-body
+                p
+                  | MotorZo has selected the best service stations in the city after careful scrutiny and technical audits. We have authorised and multi brand outlets in our fold. You will get estimates from a few of those service stations which are excellent in doing the job you requested and have ample experience working on the specific model you have. You can then choose the service station you like based on ratings and reviews and we will guide you along the way.
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse1Three', aria-expanded='false')
+                  | What benefit does MotorZo offer me? or Why should I choose MotorZo?
+            #collapse1Three.accordion-body.collapse(aria-expanded='false')
+              .panel-body
+                p
+                  | We believe that car maintenance should be a hassle free and easy process for all car owners. To help aid you in finding what is actually required for you, we have added a "Help Me Daignose" feature that allows you to identify the issues with your car using a simple, interactive format. MotorZo allows unparalled convenience by offering a bevy of options that suits everyone including free pick up and drop, doorstep services and maintenance packages. It also allows you to stay on top of the service process with constant updates and furthermore, we will ensure that you don't end up doing services that you currently don't require.
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse1Five', aria-expanded='false')
+                  | How do I book a service?
+            #collapse1Five.accordion-body.collapse(aria-expanded='false')
+              .panel-body
+                p
+                  | You can book a service on MotorZo through the website, app or via a phone call to our helpline number. It is a simple 3 step process in which you enter your car model, pick the service that you require and enter your location.
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse1Six', aria-expanded='false')
+                  | What if I have an issue?
+            #collapse1Six.accordion-body.collapse(aria-expanded='false')
+              .panel-body
+                p
+                  | We have tied up with the best service stations who share our views and values. Our customer service team will be in touch with you to evaluate your satisfaction once the service is over. In the rare incident of some issue or dissatisfaction; you can contact us directly and find a resolution to your issue. You can call the helpline number at +91 7848 060606 any time or leave a message on our website to do so.
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse1Seven', aria-expanded='false')
+                  | How long have you been in the market?
+            #collapse1Seven.accordion-body.collapse(aria-expanded='false')
+              .panel-body
+                p
+                  | We set up the company in September 2015. We spent the time studying the market, auditing and shortlisting the right service stations and developing the product and started operations in full swing by May 2016.
+          .panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapse1Eight', aria-expanded='false')
+                  | What are the assurances that you commit to?
+            #collapse1Eight.accordion-body.collapse(aria-expanded='false')
+              .panel-body
+                p
+                  | We are responsible for ensuring your satisfaction. We provide a 6 months/10,000km service warranty on all services. We commit to providing a wholesome experience that will help you understand your vehicle issues properly and solve them in an efficient and economical way.

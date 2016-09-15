@@ -1,0 +1,26 @@
+extends _layouts/master
+
+block content
+  .container-fluid
+    .row
+      .col-md-3
+        aside#sidebar.sidebar(data-plugin-sticky='', data-plugin-options='{"minWidth": 991, "containerSelector": ".container", "padding": {"top": 110}}')
+          h4.heading-primary Services
+          ul.nav.nav-list.mb-xl.show-bg-active
+            li
+              a(href='regular.html') Regular Service
+            li
+              a(href='repairs.html') Repairs &Fixes
+            li
+              a(href='body.html') Bodyworks
+            li.active
+              a(href='clean.html') Cleaning & Care
+            li
+              a(href='tyres.html') Tyres & Batteries
+            li
+              a(href='break.html') Breakdown
+      .col-md-9
+        h2 Repairs
+        p.first
+          // <img src="img/services/repairs.jpg" alt="regular service" height="500" class="pull-right" width="600">
+          | Repairs are a costly and confusing affair for any car owner. Most of the time, car owners have no idea what is wrong with their cars and don’t know which is the right place to go when a repair or fix is needed. When you need a repair or a fix, MotorZo gets you estimates from a variety of quality certified service stations that are matched to do your car’s repairs based on your location, brand and work required. You can then select the one you like based on the estimates received and the reiews of the service station made by fellow car owners. Furthermore, you can diagnose issues with your car using our inbuilt repair intelligence. Now, that’s a smart service!

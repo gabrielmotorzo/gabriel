@@ -1,0 +1,148 @@
+extends _layouts/master
+
+block vars
+  - var currentNav = 'contact';
+
+block content
+  section.page-header
+    .container
+      .row
+        .col-md-12
+          ul.breadcrumb
+            li
+              a(href='#') Home
+            li.active Contact Us
+      .row
+        .col-md-12
+          h1 Contact Us
+  .container
+    .row
+      .col-md-6
+        //- #contactSuccess.alert.alert-success.hidden.mt-lg
+        //-   strong Success!
+        //-   |  Your message has been sent to us.
+        //- #contactError.alert.alert-danger.hidden.mt-lg
+        //-   strong Error!
+        //-   |  There was an error sending your message.
+        //-   span#mailErrorMessage.font-size-xs.mt-sm.display-block
+        //- h2.mb-sm.mt-sm
+        //-   strong Contact
+        //-   |  Us
+        //- form#contactForm(action='php/contact.php', method='POST')
+          //- .row
+          //-   .form-group
+          //-     .col-md-6
+          //-       label Your name *
+          //-       input#name.form-control(type='text', value='', data-msg-required='Please enter your name.', maxlength='100', name='name', required='')
+          //-     .col-md-6
+          //-       label Your email address *
+          //-       input#email.form-control(type='email', value='', data-msg-required='Please enter your email address.', data-msg-email='Please enter a valid email address.', maxlength='100', name='email', required='')
+          //- .row
+          //-   .form-group
+          //-     .col-md-12
+          //-       label Phone
+          //-       input#phone.form-control(type='text', value='', data-msg-required='Please enter the mobile.', maxlength='100', name='phone', required='')
+          //- .row
+          //-   .form-group
+          //-     .col-md-12
+          //-       label Message *
+          //-       textarea#message.form-control(maxlength='5000', data-msg-required='Please enter your message.', rows='10', name='message', required='')
+          //- .row
+          //-   .col-md-12
+          //-     input.btn.btn-primary.btn-lg.mb-xlg(type='submit', value='Send Message', data-loading-text='Loading...')
+        .pipedriveWebForms(data-pd-webforms='https://pipedrivewebforms.com/form/c357033a3ad868c20b183fde3d5460f8')
+          script(src='https://pipedrivewebforms.com/webforms.min.js')
+        //- #contactSuccess.alert.alert-success.hidden
+        //-   strong Success!
+        //-   |  Your message has been sent to us.
+        //- #contactError.alert.alert-danger.hidden
+        //-   strong Error!
+        //-   |  There was an error sending your message.
+      .col-md-6
+        h4.heading-zo.mt-lg
+          | Get in
+          strong Touch
+        p
+          | Our helpline is always open to receive any inquiry or feedback. Please feel free to drop us an email from the form below and we will get back to you as soon as we can.
+        hr
+        h4.heading-zo
+          | The
+          strong Office
+        ul.list.list-icons.list-icons-style-3.mt-xlg
+          li
+            i.fa.fa-map-marker
+            strong Address:
+            |  Address: #1, Khykha Chambers, 100 Feet Road, Koramangala, Bangalore - 560047
+          li
+            i.fa.fa-phone
+            strong Phone:
+            | +91 7848 060606
+          li
+            i.fa.fa-envelope
+            strong Email:
+            a(href='mailto:support@motorzo.in') support@motorzo.in
+        hr
+        h4.heading-zo
+          | Business
+          strong Hours
+        ul.list.list-icons.list-dark.mt-xlg
+          li
+            i.fa.fa-clock-o
+            |  Monday - Friday - 9am to 6pm
+          li
+            i.fa.fa-clock-o
+            |  Saturday - 9am to 6pm
+          li
+            i.fa.fa-clock-o
+            |  Sunday - 9am to 6pm
+  // Google Maps - Go to the bottom of the page to change settings and map location.
+  #map.google-map
+
+block script
+  script.
+    var map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 12.9260788, lng: 77.6268167},
+        zoom: 14,
+        scrollwheel: false,
+        scalControl: false
+        //markers: marker
+      });
+      var styles = [
+        {
+          stylers: [
+            { hue: '#2f343c' },
+            { saturation: -20 }
+          ]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry',
+          stylers: [
+            { lightness: 100 },
+            { visibility: 'on' },
+            { color: '#ff9800'}
+          ]
+        },
+        {
+          featureType: 'road',
+          elementType: 'labels',
+          stylers: [
+            { visibility: 'off' }
+          ]
+        }
+      ];
+      map.setOptions({styles: styles});
+      var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+      var marker = new google.maps.Marker({
+        map: map,
+        animation: google.maps.Animation.BOUNCE,
+        position: {lat: 12.9260788, lng: 77.6268167},
+        icon: image,
+        scrollWheel: false,
+        scalControl: false
+      });
+    }
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDStL9M17hARws6wiw92qOzkpv88UC2m1g&callback=initMap" async defer)

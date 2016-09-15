@@ -1,0 +1,151 @@
+footer#footer
+  .container
+    .row
+      .col-md-4.col-sm-4
+        .text-center
+          img(src='img/icons/1a.png', alt='', height='', width='')
+          h4 Regular service
+        p
+          | Regular service and maintenance is important in keeping your car in top shape. Get the best prices only on MotorZo.
+          a.btn-flat.btn-md(href='regular.html')
+            | View More
+            i.fa.fa-arrow-right
+      .col-md-4.col-sm-4
+        .text-center
+          img(src='img/icons/2a.png', alt='', height='', width='')
+          h4 Repairs and Fixes
+        p
+          | You never know when your car might need repairs. Stay ahead and get the best service possible with MotorZo.
+          a.btn-flat.btn-md(href='repairs.html')
+            | View More
+            i.fa.fa-arrow-right
+      .col-md-4.col-sm-4
+        .text-center
+          img(src='img/icons/3a.png', alt='', height='', width='')
+          h4 Bodyworks
+        p
+          | Worried about how expensive denting and painting works are? You should definitely try MotorZo to get great deals at the best service stations.
+          a.btn-flat.btn-md(href='body.html')
+            | View More
+            i.fa.fa-arrow-right
+      .col-md-4.col-sm-4
+        .text-center
+          img(src='img/icons/4a.png', alt='', height='', width='')
+          h4  Cleaning and Care
+        p
+          | There's nothing like a shining, sparkling car. And there's no one better than MotorZo to do it.
+          a.btn-flat.btn-md(href='maintenance.html')
+            | View More
+            i.fa.fa-arrow-right
+      .col-md-4.col-sm-4
+        .text-center
+          img(src='img/icons/5a.png', alt='', height='', width='')
+          h4 Tyres and Batteries
+        p
+          | Don't know where to go to get new tyres and batteries? MotorZo gives you the best placesnear you.
+          a.btn-flat.btn-md(href='tyres.html')
+            | View More
+            i.fa.fa-arrow-right
+      .col-md-4.col-sm-4
+        .text-center
+          img(src='img/icons/6a.png', alt='breakdown', height='', width='')
+          h4  Breakdown
+        p
+          | Car broke down and don't know what to do? Contact us and we will save your day.
+          a.btn-flat.btn-md(href='break.html')
+            | View More
+            i.fa.fa-arrow-right
+  .footer-copyright
+    .container
+      .row
+        .col-md-2.col-xs-6.col-xs-offset-3.col-sm-4.col-sm-offset-4.col-md-offset-0.pull-left
+          a.logo(href='index.html')
+            img.img-responsive(alt='Motorzo', src='img/foot.png', height='')
+        .col-md-4.col-md-offset-0.col-sm-10.col-sm-offset-1.col-xs-12.mt-xl.pull-right
+          nav#sub-menu
+            ul
+              li
+                a(href='faq.html') FAQ's
+              li
+                a(href='terms.html') Terms & Conditions
+              li
+                a(href='privacy.html') Privacy
+      .row.text-center
+        ul.social-icons
+          li.social-icons-facebook
+            a(href='http://www.facebook.com/MotorZo/', target='_blank', title='Facebook')
+              i.fa.fa-facebook
+          li.social-icons-twitter
+            a(href='http://www.twitter.com/MotorZo', target='_blank', title='Twitter')
+              i.fa.fa-twitter
+          li.social-icons-linkedin
+            a(href='http://www.linkedin.com/company/motorzo', target='_blank', title='Linkedin')
+              i.fa.fa-linkedin
+// modals
+#booknowModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='formModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title(id='') Book your car service now
+      .modal-body
+        #contactSuccess1.alert.alert-success.hidden
+          strong Success!
+          |  Your message has been sent to us.
+        #contactError1.alert.alert-danger.hidden
+          strong Error!
+          |  There was an error sending your
+        form#bookForm(action='php/booknow.php', method='POST')
+          .row
+            .form-group
+              .col-md-6
+                label
+                  | Your name
+                  span.imp *
+                input#name.form-control(type='text', value='', data-msg-required='Please enter your name.', maxlength='100', name='name', required='')
+              .col-md-6
+                label
+                  | Your email address
+                  span.imp *
+                input#email.form-control(type='email', value='', data-msg-required='Please enter your email address.', data-msg-email='Please enter a valid email address.', maxlength='100', name='email', required='')
+          .row
+            .form-group
+              .col-md-12
+                label
+                  | Phone
+                  span.imp *
+                input#phone.form-control(type='text', value='', data-msg-required='Please enter the mobile.', maxlength='100', name='phone', required='')
+          .row
+            .form-group
+              .col-md-12
+                label(for='')
+                  | Select Service
+                  span.imp *
+                select#selectedService.form-control(name='selectedService')
+                  option(value='199') On Demand Eco Car Wash (from ₹199)
+                  option(value='Full Wash + Vaccum + Wax Polish(from ₹499)') Full Wash + Vaccum + Wax Polish(from ₹499)
+                  option(value='Full Wash + Service Pro(from ₹399)') Full Wash + Service Pro(from ₹399)
+                  option(value='General Check-Up and Full Service (from ₹2499)') General Check-Up and Full Service (from ₹2499)
+                  option(value='A/C Neutralizer (from ₹749)') A/C Neutralizer (from ₹749)
+                  option(value='Uphoistery Cleaning (from ₹999)') Uphoistery Cleaning (from ₹999)
+                  option(value='New Tyres (₹100 off)') New Tyres (₹100 off)
+          .row
+            .form-group
+              .col-md-12
+                label
+                  | Message
+                  span.imp *
+                textarea#message.form-control(maxlength='5000', data-msg-required='Please enter your message.', rows='10', name='message', required='')
+          .modal-footer
+            .col-md-12
+              input.btn.btn-primary.btn-lg.mb-xlg(type='submit', value='Send Message', data-loading-text='Loading...')
+#callbackModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='formModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4#formModalLabel.modal-title Get a call back
+      .modal-body
+        #call
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close

@@ -1,0 +1,89 @@
+extends _layouts/master
+
+block vars
+  - var currentNav = 'about';
+
+block content
+  section.page-header
+    .container
+      .row
+        .col-md-12
+          ul.breadcrumb
+            li
+              a(href='#') Home
+            li.active About Us
+      .row
+        .col-md-12
+          h1 About Us
+  .container
+    .row
+      .col-md-12
+        hr.tall
+    .row
+      .col-md-5
+        h3.heading-primary
+          strong Who We Are
+        p
+          | MotorZo was conceived in September, 2015 by a group of veterans from the automotive industry who had a clear understanding of the hassles and issues faced by car owners. We are building an empowering solution which is easy to use and based on modern technology. We are here to ensure that car service and maintenance is no longer a process to be feared of or hated. We believe that the smile you had when you first purchased your car should never fade.
+      .col-md-7
+        img.img-responsive(src='img/MotorZoCollage.png', alt='crew')
+    .row
+      .col-md-12
+        hr.tall
+    .row
+      .col-md-12
+        h3.heading-primary.mt-xl
+          strong Meet the founders
+    .row.mt-xlg.mb-xlg
+      .col-md-3.col-sm-6.col-xs-12
+        span.thumb-info.thumb-info-hide-wrapper-bg
+          span.thumb-info-wrapper
+            a
+              img.img-responsive(src='img/team/1.png', alt='')
+              span.thumb-info-title
+                span.thumb-info-inner Harpreet Sachdev
+                span.thumb-info-type Co-Founder & CEO
+          span.thumb-info-caption
+            span.thumb-info-social-icons
+              a(href='http://www.linkedin.com')
+                i.fa.fa-linkedin
+                span Linkedin
+      .col-md-3.col-sm-6.col-xs-12
+        span.thumb-info.thumb-info-hide-wrapper-bg
+          span.thumb-info-wrapper
+            a
+              img.img-responsive(src='img/team/2.png', alt='')
+              span.thumb-info-title
+                span.thumb-info-inner George Varghese
+                span.thumb-info-type Co-Founder & Director
+          span.thumb-info-caption
+            span.thumb-info-social-icons
+              a(href='http://www.linkedin.com')
+                i.fa.fa-linkedin
+                span Linkedin
+      .col-md-3.col-sm-6.col-xs-12
+        span.thumb-info.thumb-info-hide-wrapper-bg
+          span.thumb-info-wrapper
+            a
+              img.img-responsive(src='img/team/3.png', alt='')
+              span.thumb-info-title
+                span.thumb-info-inner Ashish Shrivatsav
+                span.thumb-info-type Co-Founder & COO
+          span.thumb-info-caption
+            span.thumb-info-social-icons
+              a(href='http://www.linkedin.com')
+                i.fa.fa-linkedin
+                span Linkedin
+      .col-md-3.col-sm-6.col-xs-12
+        span.thumb-info.thumb-info-hide-wrapper-bg
+          span.thumb-info-wrapper
+            a
+              img.img-responsive(src='img/team/4.png', alt='')
+              span.thumb-info-title
+                span.thumb-info-inner Rohit Bhatnagar
+                span.thumb-info-type Co-Founder & CTO
+          span.thumb-info-caption
+            span.thumb-info-social-icons
+              a(href='http://www.linkedin.com')
+                i.fa.fa-linkedin
+                span Linkedin

@@ -1,0 +1,60 @@
+header#header.header-narrow(data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}')
+  .header-body
+    .header-top.header-top-tertiary.header-top-style-3
+      .container
+        p.pull-right.text-color-light
+          span.mr-xs
+            a#callback.btn.btn-primary(href='', data-toggle='modal', data-target='#callbackModal')
+              i.icon-call-end.icons.mr-xs
+              |                                                 Get a call back
+          span.hidden-xs
+    .header-container.container
+      .header-row
+        .header-column
+          .header-logo
+            a(href='index.html')
+              img(alt='Motorzo', width='105', src='img/services/logo.png')
+        .header-column
+          .header-row
+            .header-nav
+              button.btn.header-btn-collapse-nav(data-toggle='collapse', data-target='.header-nav-main')
+                i.fa.fa-bars
+              .header-nav-main.header-nav-main-effect-1.header-nav-main-sub-effect-1.collapse
+                nav
+                  ul#mainNav.nav.nav-pills
+                    li(class=(currentNav === 'home' ? 'active' : ''))
+                      a(href='index.html')
+                        | Home
+                    li(class=(currentNav === 'about' ? 'active' : ''))
+                      a(href='about.html')
+                        | About
+                    li.dropdown(class=(currentNav === 'services' ? 'active' : ''))
+                      a.dropdown-toggle(href='#')
+                        | Services
+                      ul.dropdown-menu
+                        li
+                          a(href='regular.html') Regular Services
+                        li
+                          a(href='repairs.html') Repairs & Fixes
+                        li
+                          a(href='body.html') Bodyworks
+                        li
+                          a(href='clean.html') Cleaning & Care
+                        li
+                          a(href='tyres.html') Tyres & Batteries
+                        li
+                          a(href='break.html') Breakdown
+                    li
+                      a(href='https://motorzo.wordpress.com/', target='_blank')
+                        | Blog
+                    li
+                      a(href='http://motorzo.in/offers/#/book', target='_blank')
+                        | offers
+                    li(class=(currentNav === 'faq' ? 'active' : ''))
+                      a(href='faq.html')
+                        | FAQ
+                    li(class=(currentNav === 'contact' ? 'active' : ''))
+                      a(href='contact.html')
+                        | Contact-Us
+#booknow(data-toggle='modal', data-target='#booknowModal')
+  h4 BooK Now
