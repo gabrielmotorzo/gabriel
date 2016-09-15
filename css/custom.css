@@ -3,6 +3,7 @@ body{
     width: 100%;
     font-size: 18px;
     background-color: #fff;
+    font-family: 'Lato', sans-serif !important;
 }
 .large{font-size: 21px;}
 .small{font-size: 13px;}
