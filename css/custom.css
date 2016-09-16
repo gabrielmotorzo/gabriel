@@ -217,7 +217,12 @@ div.owl-dot.active,div.owl-dot{padding-right: 5px!important;}
     padding-right: 0;
     padding-left: 0;
 }
-.heading-zo{color:#ff9800;}
+.heading-zo{
+    color:#ff9800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+#apps{ margin-top: 20px; }
 #sendlink{margin-top: 160px;}
 .social-icons-facebook,.social-icons-linkedin,.social-icons-twitter{margin-right: 12px!important;}
 .table > tbody > tr > td{border-top: 0;}
@@ -227,3 +232,4 @@ div.owl-dot.active,div.owl-dot{padding-right: 5px!important;}
 .pipedriveWebForms > iframe{
     height: 800px !important;
 }
+h4.size { font-size: 20px !important; }

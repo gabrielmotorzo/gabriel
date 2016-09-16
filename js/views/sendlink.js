@@ -15,19 +15,28 @@
                 $errorMessage = $('#mailErrorMessage');
 
             $submitButton.button('loading');
-
+            var phone=["+91"+$('#phone').val()];
+            var smaPayload = {
+                "phone_numbers": phone,
+                "message": "Thank you for your interest in MotorZo. Download the App from https://goo.gl/cbc0kV to enjoy a hassle free car service experience!"
+            };
+            console.log("length"+smaPayload.message.length)
             // Ajax Submit
             $.ajax({
                 type: 'POST',
-                url: $form.attr('action'),
-                data: {
-                    phone: $form.find('#phone').val()
+                url: 'http://52.77.114.42:19010/sms',
+                contentType:"application/json; charset=utf-8",
+                data:JSON.stringify(smaPayload),
+                dataType:"json",
+                beforeSend: function (xhr) {
+                    /* Authorization header */
+                    xhr.setRequestHeader("Authorization", "Bearer a35cfd1b-94d6-431a-a5b1-ba799dc9ddf0");
                 }
             }).always(function(data, textStatus, jqXHR) {
 
                 $errorMessage.empty().hide();
 
-                if (data.response == 'success') {
+                if (textStatus) {
 
                     $messageSuccess.removeClass('hidden');
                     $messageError.addClass('hidden');

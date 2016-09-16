@@ -73,8 +73,8 @@ block content
         //-   .tp-caption.top-label(data-x='right', data-hoffset='100', data-y='center', data-voffset='-95', data-start='1000', style='z-index: 5', data-transform_in='y:[-300%];opacity:0;s:500;') YOUR TRUSTED
         //-   .tp-caption.main-label(data-x='right', data-hoffset='100', data-y='center', data-voffset='-45', data-start='1500', data-whitespace='nowrap', data-transform_in='y:[100%];s:500;', data-transform_out='opacity:0;s:500;', style='z-index: 5', data-mask_in='x:0px;y:0px;') Smart Car Service
         //-   a.tp-caption.btn.btn-primary.btn-lg(data-hash='', data-hash-offset='85', href='', target='_blank', data-x='center', data-hoffset='220', data-y='center', data-voffset='80', data-start='2500', data-whitespace='nowrap', data-transform_in='y:[100%];s:500;', data-transform_out='opacity:0;s:500;', style='z-index: 5', data-mask_in='x:0px;y:0px;') Get Started Now
-  .container.motorzois
-    .row.text.center
+  .container-fluid.motorzois
+    .text.center
       p
         | MotorZo is a smart car service that removes all hassles associated with car service.
       p.mb-sm.mt-xs.word-rotator-title.text-center
@@ -121,8 +121,8 @@ block content
       .col-sm-6.image
         img.img-responsive.appear-animation(src='img/identify.png', alt='', data-appear-animation='fadeInRight')
   .container-fluid
-    .row
-      .col-md-12#counters
+    .row#counters
+      .col-md-12
         .counters
           .col-md-4.col-sm-6
             .counter.counter-primary
@@ -173,7 +173,7 @@ block content
               p.mb-lg
                 | We offer an interface that gets you more with less clicks. Identify car issues yourself and let our smart algorithm find the service station that is best based on your repair, car and location!
         .col-md-4
-          img.img-responsive.mockup-landing-page.mb-xl.appear-animation.mt-lg(src='img/Confused.png', alt='Motorzo', data-appear-animation='fadeInDown', data-appear-animation-delay='300')
+          img.img-responsive.hidden-xs.mockup-landing-page.mb-xl.appear-animation.mt-lg(src='img/Confused.png', alt='Motorzo', data-appear-animation='fadeInDown', data-appear-animation-delay='300')
         .col-md-4
           .feature-box.feature-box-style-2.mb-xl.appear-animation(data-appear-animation='fadeInRight', data-appear-animation-delay='300')
             .feature-box-icon
@@ -301,23 +301,22 @@ block content
       .row
         #sendlink.col-md-6.text-center
           h3.heading-zo.appear-animation(data-appear-animation='fadeInRight') I am ready for a smart service!
-          form#sendlinkForm.form-inline.appear-animation(data-appear-animation='fadeInLeft', action='sendme.php')
+          form#sendlinkForm.form-inline.appear-animation(data-appear-animation='fadeInLeft')
             .form-group
               label.sr-only(for='phone') Phone
               .input-group
                 span.input-group-addon
                   i.fa.fa-cog.fa-spin.fa-1x
-                  |                       +91
-                input#phone.form-control(type='text', name='phone', placeholder='Enter mobile number' required)
-            input.btn.btn-primary(type='submit', value='Get App link', data-loading-text='Loading...', min="10", max="10")
-            #contactSuccess2.alert.alert-success.hidden
-              button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
-              strong Success!
-              |  You will receive the App link soon! .
-            #contactError2.alert.alert-danger.hidden
-              button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
-              strong Error!
-              |  Oops! That wasn't supposed to happen! We are working on it!
+                  |                         +91
+                input#phone.form-control.input-lg(type='text', value='', data-msg-required='Please enter the mobile.', maxlength='100', name='phone', placeholder='Enter mobile number', required='')
+            input.btn.btn-primary.btn-lg(type='submit', value='Send me an app link', data-loading-text='Loading...')
+          #contactSuccess2.alert.alert-success.hidden
+            strong Success!
+            |  You will receive the App link soon! .
+          #contactError2.alert.alert-danger.hidden
+            strong Error!
+            |  Oops! That wasn't supposed to happen! We are working on it!
+          br
           .row
             .col-xs-8.col-xs-offset-2.col-lg-8.col-lg-offset-2
               ul.list-unstyled.list-inline
@@ -336,6 +335,7 @@ block content
                 </div>
         .col-md-6.appear-animation(data-appear-animation='fadeInRight')
           img.img-responsive(src='img/try.png', alt='image', height='200px')
+
 
 
 block script
@@ -436,3 +436,4 @@ block script
       }
     }
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDStL9M17hARws6wiw92qOzkpv88UC2m1g&callback=initMap" async defer)
+  script(src="js/views/sendlink.js")
