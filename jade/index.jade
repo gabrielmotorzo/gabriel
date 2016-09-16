@@ -73,7 +73,7 @@ block content
         //-   .tp-caption.top-label(data-x='right', data-hoffset='100', data-y='center', data-voffset='-95', data-start='1000', style='z-index: 5', data-transform_in='y:[-300%];opacity:0;s:500;') YOUR TRUSTED
         //-   .tp-caption.main-label(data-x='right', data-hoffset='100', data-y='center', data-voffset='-45', data-start='1500', data-whitespace='nowrap', data-transform_in='y:[100%];s:500;', data-transform_out='opacity:0;s:500;', style='z-index: 5', data-mask_in='x:0px;y:0px;') Smart Car Service
         //-   a.tp-caption.btn.btn-primary.btn-lg(data-hash='', data-hash-offset='85', href='', target='_blank', data-x='center', data-hoffset='220', data-y='center', data-voffset='80', data-start='2500', data-whitespace='nowrap', data-transform_in='y:[100%];s:500;', data-transform_out='opacity:0;s:500;', style='z-index: 5', data-mask_in='x:0px;y:0px;') Get Started Now
-  .container-fluid.motorzois
+  .container.motorzois
     .row.text.center
       p
         | MotorZo is a smart car service that removes all hassles associated with car service.
@@ -120,6 +120,35 @@ block content
             | Stay updated, get your car picked and dropped and pay with ease. You can even get things done at your doorstep. All from your phone!
       .col-sm-6.image
         img.img-responsive.appear-animation(src='img/identify.png', alt='', data-appear-animation='fadeInRight')
+  .container-fluid
+    .row
+      .col-md-12#counters
+        .counters
+          .col-md-4.col-sm-6
+            .counter.counter-primary
+              i.fa.fa-star
+              strong(data-to='4.7', data-plugin-options='{"decimals": 1}') 0
+              label.class("countlab-zo") Average Customer Rating
+              p.class("countp-zo") They can't be wrong
+          //.col-md-3.col-sm-6
+            .counter.counter-with-unit.counter-primary
+              i.fa.fa-star
+              strong $
+              strong(data-to='15') 0
+              label Currency
+          .col-md-4.col-sm-6
+            .counter.counter-with-unit.counter-primary
+              i.fa.fa-map-marker
+              strong(data-to='112') 0
+              label.class("countlab-zo") Service Centers
+              p.class("countp-zo") All Quality Certified
+          .col-md-4.col-md-offset-0.col-sm-6.col-sm-offset-3
+            .counter.counter-primary
+              i.fa.fa-thumbs-up
+              strong(data-to="6027") 0
+              label.class("countlab-zo") Fans
+              p.class("countp-zo") Many more to come
+
   section.section.map
     .visible-sm.visible-md.visible-lg
       h3.padding.text-center Why choose Motorzo
@@ -238,7 +267,7 @@ block content
     .visible-xs
       p.padding our vendors are all over bangalore
     #map
-  div.container
+  //div.container
     .row
       #sendlink.col-md-6.text-center
         .row
@@ -267,6 +296,46 @@ block content
 
       .col-md-6.appear-animation(data-appear-animation='fadeInRight')
         img.img-responsive(src='img/try.png', alt='image', height='500px')
+  section.link
+    .container-fluid
+      .row
+        #sendlink.col-md-6.text-center
+          h3.heading-zo.appear-animation(data-appear-animation='fadeInRight') I am ready for a smart service!
+          form#sendlinkForm.form-inline.appear-animation(data-appear-animation='fadeInLeft', action='sendme.php')
+            .form-group
+              label.sr-only(for='phone') Phone
+              .input-group
+                span.input-group-addon
+                  i.fa.fa-cog.fa-spin.fa-1x
+                  |                       +91
+                input#phone.form-control(type='text', name='phone', placeholder='Enter mobile number' required)
+            input.btn.btn-primary(type='submit', value='Get App link', data-loading-text='Loading...', min="10", max="10")
+            #contactSuccess2.alert.alert-success.hidden
+              button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+              strong Success!
+              |  You will receive the App link soon! .
+            #contactError2.alert.alert-danger.hidden
+              button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+              strong Error!
+              |  Oops! That wasn't supposed to happen! We are working on it!
+          .row
+            .col-xs-8.col-xs-offset-2.col-lg-8.col-lg-offset-2
+              ul.list-unstyled.list-inline
+                li
+                  a
+                    img.img-responsive(src='img/appstore.png', alt='')
+                li
+                  a(href='https://goo.gl/ZxHe1m', target='_blank')
+                    img.img-responsive(src='img/googleplay.png', alt='')
+              //
+                <div class="col-xs-5">
+                <img src="img/appstore.png" alt="" class="img-responsive">
+                </div>
+                <div class="col-xs-5">
+                <a href="https://goo.gl/ZxHe1m" target="_blank"><img src="img/googleplay.png" alt="" class="img-responsive"></a>
+                </div>
+        .col-md-6.appear-animation(data-appear-animation='fadeInRight')
+          img.img-responsive(src='img/try.png', alt='image', height='200px')
 
 
 block script

@@ -97,7 +97,7 @@
             </ul>
           </div>
         </div>
-        <div class="container-fluid motorzois">
+        <div class="container motorzois">
           <div class="row text center">
             <p>MotorZo is a smart car service that removes all hassles associated with car service.</p>
             <p class="mb-sm mt-xs word-rotator-title text-center">Motorzo is<strong class="inverted"><span data-plugin-options="{&quot;delay&quot;: 2000, &quot;animDelay&quot;: 500}" class="word-rotate"><span class="word-rotate-items large"><span>trustworthy</span><span>convenient</span><span>transparent</span><span>smart</span><span>easy</span></span></span></strong></p>
@@ -143,6 +143,39 @@
               </div>
             </div>
             <div class="col-sm-6 image"><img src="img/identify.png" alt="" data-appear-animation="fadeInRight" class="img-responsive appear-animation"></div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div id="counters" class="col-md-12">
+              <div class="counters">
+                <div class="col-md-4 col-sm-6">
+                  <div class="counter counter-primary"><i class="fa fa-star"></i><strong data-to="4.7" data-plugin-options="{&quot;decimals&quot;: 1}">0</strong>
+                    <label countlab-zo class="class">Average Customer Rating</label>
+                    <p countp-zo class="class">They can't be wrong</p>
+                  </div>
+                </div>
+                <!--.col-md-3.col-sm-6
+                .counter.counter-with-unit.counter-primary
+                  i.fa.fa-star
+                  strong $
+                  strong(data-to='15') 0
+                  label Currency
+                -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="counter counter-with-unit counter-primary"><i class="fa fa-map-marker"></i><strong data-to="112">0</strong>
+                    <label countlab-zo class="class">Service Centers</label>
+                    <p countp-zo class="class">All Quality Certified</p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
+                  <div class="counter counter-primary"><i class="fa fa-thumbs-up"></i><strong data-to="6027">0</strong>
+                    <label countlab-zo class="class">Fans</label>
+                    <p countp-zo class="class">Many more to come</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <section class="section map">
@@ -269,38 +302,77 @@
           </div>
           <div id="map"></div>
         </section>
-        <div class="container">
-          <div class="row">
-            <div id="sendlink" class="col-md-6 text-center">
-              <div class="row">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th colspan="2">I am ready for a smart service</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="col-xs-7">
-                        <input type="number" class="form-control">
-                      </td>
-                      <td class="col-xs-5">
-                        <input type="submit" value="Send me app link" class="btn btn-success">
-                      </td>
-                    </tr>
-                    <tr class="col-xs-12">
-                      <td><img src="img/appstore.png" alt="appstore link" class="img-responsive"></td>
-                      <td><a href=""><img src="img/googleplay.png" alt="google play store" class="img-responsive"></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div id="contactSuccess" class="alert alert-success hidden"><strong>Success!</strong> Your message has been sent to us.</div>
-                <div id="contactError" class="alert alert-danger hidden"><strong>Error!</strong> There was an error sending your message.</div>
+        <!--div.container
+        .row
+          #sendlink.col-md-6.text-center
+            .row
+              table.table
+                thead
+                  tr
+                    th(colspan='2') I am ready for a smart service
+                tbody
+                  tr
+                    td.col-xs-7
+                      input.form-control(type='number')
+                    td.col-xs-5
+                      input.btn.btn-success(type='submit', value='Send me app link')
+                  tr.col-xs-12
+                    td
+                      img.img-responsive(src='img/appstore.png', alt='appstore link')
+                    td
+                      a(href='')
+                        img.img-responsive(src='img/googleplay.png', alt='google play store')
+              #contactSuccess.alert.alert-success.hidden
+                strong Success!
+                |  Your message has been sent to us.
+              #contactError.alert.alert-danger.hidden
+                strong Error!
+                |  There was an error sending your message.
+        
+          .col-md-6.appear-animation(data-appear-animation='fadeInRight')
+            img.img-responsive(src='img/try.png', alt='image', height='500px')
+        -->
+        <section class="link">
+          <div class="container-fluid">
+            <div class="row">
+              <div id="sendlink" class="col-md-6 text-center">
+                <h3 data-appear-animation="fadeInRight" class="heading-zo appear-animation">I am ready for a smart service!</h3>
+                <form id="sendlinkForm" data-appear-animation="fadeInLeft" action="sendme.php" class="form-inline appear-animation">
+                  <div class="form-group">
+                    <label for="phone" class="sr-only">Phone</label>
+                    <div class="input-group"><span class="input-group-addon"><i class="fa fa-cog fa-spin fa-1x"></i>                      +91</span>
+                      <input id="phone" type="text" name="phone" placeholder="Enter mobile number" required class="form-control">
+                    </div>
+                  </div>
+                  <input type="submit" value="Get App link" data-loading-text="Loading..." min="10" max="10" class="btn btn-primary">
+                  <div id="contactSuccess2" class="alert alert-success hidden">
+                    <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button><strong>Success!</strong> You will receive the App link soon! .
+                  </div>
+                  <div id="contactError2" class="alert alert-danger hidden">
+                    <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button><strong>Error!</strong> Oops! That wasn't supposed to happen! We are working on it!
+                  </div>
+                </form>
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-2 col-lg-8 col-lg-offset-2">
+                    <ul class="list-unstyled list-inline">
+                      <li><a><img src="img/appstore.png" alt="" class="img-responsive"></a></li>
+                      <li><a href="https://goo.gl/ZxHe1m" target="_blank"><img src="img/googleplay.png" alt="" class="img-responsive"></a></li>
+                    </ul>
+                    <!--
+                    <div class="col-xs-5">
+                    <img src="img/appstore.png" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-xs-5">
+                    <a href="https://goo.gl/ZxHe1m" target="_blank"><img src="img/googleplay.png" alt="" class="img-responsive"></a>
+                    </div>
+                    -->
+                  </div>
+                </div>
               </div>
+              <div data-appear-animation="fadeInRight" class="col-md-6 appear-animation"><img src="img/try.png" alt="image" height="200px" class="img-responsive"></div>
             </div>
-            <div data-appear-animation="fadeInRight" class="col-md-6 appear-animation"><img src="img/try.png" alt="image" height="500px" class="img-responsive"></div>
           </div>
-        </div>
+        </section>
       </div>
       <footer id="footer">
         <div class="container">
@@ -500,28 +572,28 @@
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDStL9M17hARws6wiw92qOzkpv88UC2m1g&amp;callback=initMap" async defer></script>
-    <script>
-      window.$zopim || (function (d, s) {
-      var z = $zopim = function (c) {
-      z._.push(c)
-      }, $ = z.s =
-      d.createElement(s), e = d.getElementsByTagName(s)[0];
-      z.set = function (o) {
-      z.set._.push(o)
-      };
-      z._ = [];
-      z.set._ = [];
-      $.async = !0;
-      $.setAttribute("charset", "utf-8");
-      $.src = "//v2.zopim.com/?42Q33oqAUp69iHpLiNuDt2BFycAHELlA";
-      z.t = +new Date;
-      $.type = "text/javascript";
-      e.parentNode.insertBefore($, e)
-      })(document, "script");
-      
-      
-      
-    </script>
+    <!--script.
+    window.$zopim || (function (d, s) {
+    var z = $zopim = function (c) {
+    z._.push(c)
+    }, $ = z.s =
+    d.createElement(s), e = d.getElementsByTagName(s)[0];
+    z.set = function (o) {
+    z.set._.push(o)
+    };
+    z._ = [];
+    z.set._ = [];
+    $.async = !0;
+    $.setAttribute("charset", "utf-8");
+    $.src = "//v2.zopim.com/?42Q33oqAUp69iHpLiNuDt2BFycAHELlA";
+    z.t = +new Date;
+    $.type = "text/javascript";
+    e.parentNode.insertBefore($, e)
+    })(document, "script");
+    
+    
+    
+    -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
