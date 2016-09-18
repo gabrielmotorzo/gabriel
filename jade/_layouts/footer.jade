@@ -82,22 +82,23 @@ footer#footer
             a(href='http://www.linkedin.com/company/motorzo', target='_blank', title='Linkedin')
               i.fa.fa-linkedin
 // modals
-#booknowModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='formModalLabel', aria-hidden='true')
-  .modal-dialog
-    .modal-content
-      .modal-header
-        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-        h4.modal-title(id='') Book your car service now
-      .modal-body
-        .pipedriveWebForms(data-pd-webforms='https://pipedrivewebforms.com/form/c357033a3ad868c20b183fde3d5460f8')
-          script(src='https://pipedrivewebforms.com/webforms.min.js')
-#callbackModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='formModalLabel', aria-hidden='true')
-  .modal-dialog
-    .modal-content
-      .modal-header
-        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-        h4#formModalLabel.modal-title Get a call back
-      .modal-body
-        #call
-      .modal-footer
-        button.btn.btn-default(type='button', data-dismiss='modal') Close
+.container-fluid
+  #booknowModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='formModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          h4.modal-title(id='') Book your car service now
+        .modal-body
+          .pipedriveWebForms(data-pd-webforms='https://pipedrivewebforms.com/form/c357033a3ad868c20b183fde3d5460f8')
+            script(src='https://pipedrivewebforms.com/webforms.min.js')
+  #callbackModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='formModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          h4#formModalLabel.modal-title Get a call back
+        .modal-body
+          #call
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Close
